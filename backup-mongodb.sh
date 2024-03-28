@@ -16,7 +16,7 @@ echo "[$SCRIPT_NAME] Uploading compressed archive to S3 bucket..."
 mc alias set "${OCP_BACKUP_S3_NAME}" "${OCP_BACKUP_S3_HOST}" "${OCP_BACKUP_S3_ACCESS_KEY}" "${OCP_BACKUP_S3_SECRET_KEY}"
 
 
-# move files to S3 and delete temporary files
+# move files to S3
 mc cp "$COPY_NAME" "${OCP_BACKUP_S3_NAME}"/"${OCP_BACKUP_S3_BUCKET}"
 
 
